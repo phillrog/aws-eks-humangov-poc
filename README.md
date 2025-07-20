@@ -155,11 +155,13 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 <br/>
 
-<img width="1916" height="992" alt="image" src="https://gist.github.com/user-attachments/assets/e325f603-33a5-4cb6-82b0-7de5ed352c82" />
+<img width="1916" height="992" alt="image" src="https://github.com/user-attachments/assets/28f729a6-824c-4178-a6ff-b1682f7fdd69" />
+
 
 <br/>
 
-<img width="1910" height="747" alt="image" src="https://gist.github.com/user-attachments/assets/dc1f4196-133d-49d9-bebf-70a8a19e4890" />
+<img width="1910" height="747" alt="image" src="https://github.com/user-attachments/assets/132b6e07-6a7c-4304-8406-e76dec3636fe" />
+
 
 <br/>
 
@@ -238,7 +240,8 @@ kubectl get deployment -n kube-system aws-load-balancer-controller
 
 Um exemplo de output é o seguinte:
 
-<img width="957" height="112" alt="image" src="https://gist.github.com/user-attachments/assets/8fa6ab5e-d189-4218-874a-be7a001ed45e" />
+<img width="957" height="112" alt="image" src="https://github.com/user-attachments/assets/b71cf7a6-fd28-484f-8f16-9807d2533e09" />
+
 
 ---
 
@@ -288,16 +291,16 @@ Crie um novo repositório ECR público chamado **humangov-app**, build and push 
 3. Após a conclusão do build, adicione uma tag à sua imagem, para que você possa fazer o push da imagem para este repositório:
     
     ```bash
-    docker tag humangov-app:latest public.ecr.aws/k5z6r9x6/humangov-app:latest
+    docker tag humangov-app:latest SUA_IMAGEM_NA_AWS_ECR
     ```
     
 4. Execute o seguinte comando para fazer o push desta imagem para o novo repositório AWS que você criou:
     
     ```bash
-    docker push public.ecr.aws/k5z6r9x6/humangov-app:latest
+    docker push SUA_IMAGEM_NA_AWS_ECR
     ```
 
-<img width="1911" height="968" alt="Captura de tela 2025-07-19 181343" src="https://gist.github.com/user-attachments/assets/ee393e73-972a-4fc8-ba5a-a7b8c971f98e" />
+<img width="1911" height="968" alt="image" src="https://github.com/user-attachments/assets/712628d0-a751-4d86-a625-23a1569d7df1" />
 
 
 
@@ -435,7 +438,8 @@ kubectl apply -f humangov-sao-paulo.yaml
 
 ```
 
-<img width="1008" height="126" alt="image" src="https://gist.github.com/user-attachments/assets/4981ff61-a489-4ceb-a1f0-47139b67db72" />
+<img width="1008" height="126" alt="image" src="https://github.com/user-attachments/assets/aaef7450-5d69-46d3-b233-08322f9dd5a9" />
+
 
 <br/>
 
@@ -458,7 +462,8 @@ Crie um domínio .click, na AWS custa USD 3,00, na hostinger custa R$ 11,00. Cas
     
 <br/>
 
-<img width="1912" height="930" alt="image" src="https://gist.github.com/user-attachments/assets/6ab10d54-ecc4-4240-a59b-09e2eab8f089" />
+<img width="1912" height="930" alt="image" src="https://github.com/user-attachments/assets/75c2ef10-c9e6-4866-bf90-579772c7ce07" />
+
 
 <br/>
 
@@ -531,7 +536,8 @@ variable "states" {
     
 <br/>
 
-<img width="807" height="240" alt="image" src="https://gist.github.com/user-attachments/assets/3ce0f1f0-36d8-404f-b724-f1fc43a8c592" />
+<img width="807" height="240" alt="image" src="https://github.com/user-attachments/assets/2886cb98-c43d-4774-8414-08fc38c64bac" />
+
 
 <br/>
     
@@ -558,7 +564,8 @@ cp humangov-sao-paulo.yaml humangov-rio-de-janeiro.yaml
 kubectl apply -f humangov-rio-de-janeiro.yaml
 ```
 
-<img width="1103" height="176" alt="image" src="https://gist.github.com/user-attachments/assets/7b66ba52-0cd4-4a59-b989-300941608a07" />
+<img width="1103" height="176" alt="image" src="https://github.com/user-attachments/assets/18ec25a6-50d9-4586-b7cc-d32577909cfe" />
+
 
     
  6. Abra o arquivo `humangov-ingress-all.yaml` no editor e adicione a Ingress rule para o estado do Rio de Janeiro. **Certifique-se de substituir o Certificate ARN em pelo seu Certificate ARN.**
@@ -610,20 +617,23 @@ kubectl apply -f humangov-ingress-all.yaml
 
 8. Adicione a entrada DNS do Route 53 para o estado do Rio de Janeiro.
 
-<img width="1905" height="801" alt="image" src="https://gist.github.com/user-attachments/assets/fef40ba6-7878-4a75-8e68-ff558e7f4c20" />
+<img width="1905" height="801" alt="image" src="https://github.com/user-attachments/assets/57fedd29-0e68-44e2-9ead-8630515170f3" />
 
-<img width="1913" height="858" alt="image" src="https://gist.github.com/user-attachments/assets/b61e4d92-926d-4609-8ab1-d1c92446d246" />
+
+<img width="1913" height="858" alt="image" src="https://github.com/user-attachments/assets/06ea4bd1-524a-42f7-95f8-f05a26753588" />
 
 
 9. Teste a aplicação (por exemplo `[sao-paulo.humangov-prs.click](https://sao-paulo.humangov-prs.click/)` e[`rio-de-janeiro.humangov-prs.click`](https://rio-de-janeiro.humangov-prs.click/) - **substitua `humangov-prs.click` pelo seu domínio**). 
 
 <br/>
 
-<img width="1915" height="961" alt="image" src="https://gist.github.com/user-attachments/assets/90d8f82d-100d-47af-821d-9aa61a308acc" />
+<img width="1915" height="961" alt="image" src="https://github.com/user-attachments/assets/6f153f16-3852-4702-9e0d-0fcab853d148" />
+
 
 <br/>
 
-<img width="1917" height="962" alt="image" src="https://gist.github.com/user-attachments/assets/05821142-8152-4867-89fa-9a19e1198025" />
+<img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/610b1176-903d-492c-8a5a-9c241f5d844d" />
+
 
 <br/>
 
